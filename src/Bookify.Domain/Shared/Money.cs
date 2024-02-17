@@ -11,7 +11,7 @@ public record Money(decimal Amount, Currency Currency)
             throw new InvalidOperationException("Currencies have to be equal");
         }
         
-        return new Money(first.Amount + second.Amount, first.Currency);
+        return new Money(first.Amount + second.Amount, first.Currency); 
     }
 
     public static Money Zero() => new(0, Currency.None);
